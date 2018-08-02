@@ -45,6 +45,46 @@
             background: none !important;
             padding: 0 !important;
         }
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        input[type=email], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
     </style>
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js?ver=4.3.16'></script>
     <link rel='canonical' href='http://wrestore.iupui.edu/contact/' />
@@ -109,56 +149,75 @@
 
             <section id="content">
                 <header id="pageHeader">
-                    <h1>Contact</h1>
+                    <h1>Contact Us</h1>
                 </header>
 
 
-                <p><strong>Dr. Meghna Babbar-Sebens</strong><br />
-                    <small>Associate Professor</small><br />
-                    <em>School of Civil and Construction Engineering</em><br />
-                    Oregon State University<br />
-                    211, Owen Hall, Campus Way<br />
-                    Corvallis, OR 97331<br />
-                    <a href="mailto:meghna@oregonstate.edu">meghna@oregonstate.edu</a></p>
+                <!--<p><strong>Dr. Meghna Babbar-Sebens</strong><br />-->
+                    <!--<small>Associate Professor</small><br />-->
+                    <!--<em>School of Civil and Construction Engineering</em><br />-->
+                    <!--Oregon State University<br />-->
+                    <!--211, Owen Hall, Campus Way<br />-->
+                    <!--Corvallis, OR 97331<br />-->
+                    <!--<a href="mailto:meghna@oregonstate.edu">meghna@oregonstate.edu</a></p>-->
 
-                <p><strong>Dr. Snehasis Mukhopadhyay</strong><br />
-                    <small>Professor</small><br />
-                    <em>Department of Computer and Information Science</em><br />
-                    Indiana University Purdue University-Indianapolis<br />
-                    SL 280, 723 W. Michigan Street<br />
-                    Indianapolis, IN 46202<br />
-                    <a href="mailto:smukhopa@cs.iupui.edu">smukhopa@cs.iupui.edu</a></p>
+                <!--<p><strong>Dr. Snehasis Mukhopadhyay</strong><br />-->
+                    <!--<small>Professor</small><br />-->
+                    <!--<em>Department of Computer and Information Science</em><br />-->
+                    <!--Indiana University Purdue University-Indianapolis<br />-->
+                    <!--SL 280, 723 W. Michigan Street<br />-->
+                    <!--Indianapolis, IN 46202<br />-->
+                    <!--<a href="mailto:smukhopa@cs.iupui.edu">smukhopa@cs.iupui.edu</a></p>-->
 
-                <p><strong>Dr. Jenna H. Tilt</strong><br />
-                    <small>Assistant Professor </small><br />
-                    <em>Department of Geography</em><br />
-                    Oregon State University<br />
-                    Wilkinson hal 120<br />
-                    Corvallis, OR 97331<br />
-                    <a href="mailto:tiltj@oregonstate.edu">tiltj@oregonstate.edu</a></p>
-                <p><strong>Dr. Jeff Reimer</strong><br />
-                    <small>Professor </small><br />
-                    <em>Applied Economics</em><br />
-                    Oregon State University<br />
-                    Ballard Extension Hall 231<br />
-                    Corvallis, OR 97331<br />
-                    <a href="mailto:Jeff.Reimer@oregonstate.edu">Jeff.Reimer@oregonstate.edu</a></p>
+                <!--<p><strong>Dr. Jenna H. Tilt</strong><br />-->
+                    <!--<small>Assistant Professor </small><br />-->
+                    <!--<em>Department of Geography</em><br />-->
+                    <!--Oregon State University<br />-->
+                    <!--Wilkinson hal 120<br />-->
+                    <!--Corvallis, OR 97331<br />-->
+                    <!--<a href="mailto:tiltj@oregonstate.edu">tiltj@oregonstate.edu</a></p>-->
+                <!--<p><strong>Dr. Jeff Reimer</strong><br />-->
+                    <!--<small>Professor </small><br />-->
+                    <!--<em>Applied Economics</em><br />-->
+                    <!--Oregon State University<br />-->
+                    <!--Ballard Extension Hall 231<br />-->
+                    <!--Corvallis, OR 97331<br />-->
+                    <!--<a href="mailto:Jeff.Reimer@oregonstate.edu">Jeff.Reimer@oregonstate.edu</a></p>-->
 
-                <p><strong>Dr. Ganti Murthy</strong><br />
-                    <small>Associate Professor</small><br />
-                    <em>Biological and Ecological Engineering</em><br />
-                    Oregon State University<br />
-                    Gilmore Hall 122<br />
-                    Corvallis, OR 97331<br />
-                    <a href="mailto:Ganti.Murthy@oregonstate.edu">Ganti.Murthy@oregonstate.edu</a></p>
+                <!--<p><strong>Dr. Ganti Murthy</strong><br />-->
+                    <!--<small>Associate Professor</small><br />-->
+                    <!--<em>Biological and Ecological Engineering</em><br />-->
+                    <!--Oregon State University<br />-->
+                    <!--Gilmore Hall 122<br />-->
+                    <!--Corvallis, OR 97331<br />-->
+                    <!--<a href="mailto:Ganti.Murthy@oregonstate.edu">Ganti.Murthy@oregonstate.edu</a></p>-->
 
-                <p><strong>Dr. Arjan Durresi</strong><br />
-                    <small>Professor</small><br />
-                    <em>Computer and Information Science</em><br />
-                    Indiana University Purdue University Indianapolis<br />
-                    280 SL, 723 W. Michigan St<br />
-                    Indianapolis, IN 46202<br />
-                    <a href="mailto:durresi at cs.iupui.edu">durresi at cs.iupui.edu</a></p>
+                <!--<p><strong>Dr. Arjan Durresi</strong><br />-->
+                    <!--<small>Professor</small><br />-->
+                    <!--<em>Computer and Information Science</em><br />-->
+                    <!--Indiana University Purdue University Indianapolis<br />-->
+                    <!--280 SL, 723 W. Michigan St<br />-->
+                    <!--Indianapolis, IN 46202<br />-->
+                    <!--<a href="mailto:durresi at cs.iupui.edu">durresi at cs.iupui.edu</a></p>-->
+
+                <div class="container">
+                    <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="Email">Email Address</label>
+                        <input type="email" id="Email" name="Email Address" placeholder="Your Email Address..">
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write your Questions/Comments.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
 
 
             </section>
