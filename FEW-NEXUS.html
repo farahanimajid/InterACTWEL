@@ -18,6 +18,22 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+
+
+
+
+
+
+
+
+
+
+
+
     <!--<link rel="pingback" href="http://wrestore.iupui.edu/xmlrpc.php" />-->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,8 +61,39 @@
             background: none !important;
             padding: 0 !important;
         }
+
+        #map { width: 660px; height: 500px; margin: 0; background: #fff; }
     </style>
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js?ver=4.3.16'></script>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/rbush@2.0.1/rbush.min.js"></script>
+    <script src="https://unpkg.com/labelgun@6.0.0/lib/labelgun.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+    <script type="text/javascript" src="https://cloudybay.github.io/leaflet.latlng-graticule/leaflet.latlng-graticule.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--mini globle map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/globeminimap.js"></script>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+
+
+
     <link rel='canonical' href='http://wrestore.iupui.edu/partners/faculty/' />
     <link rel='shortlink' href='http://wrestore.iupui.edu/?p=15' />
 </head>
@@ -110,17 +157,48 @@
 
 
 
-
             <section id="content">
                 <header id="pageHeader">
                     <h1>InterACTWEL Projects</h1>
                 </header>
-                <!-- Map Column -->
-                <div class="col-lg-8 mb-4">
-                    <!-- Embedded Google Map -->
-                    <!--<iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;11=39.099135, -100.27378&amp;spn=44.567095,-123.27378&amp;t=m&amp;z=12&amp;output=embed"></iframe>-->
-                    <iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=45.882193, -119.319961&amp;spn=45.882193, -119.319961&amp;t=m&amp;z=1&amp;output=embed"></iframe>
-                </div>
+
+                <!--&lt;!&ndash;map container&ndash;&gt;-->
+                <!--<div id="sitemap" class="map">-->
+                    <!--<script src="js/map.js"></script>-->
+
+                <!--</div>-->
+                <div id="map"></div>
+                <script>
+                    // 1. Create a map object.
+                    var mymap = L.map('map', {
+                        center: [45.84555, -119.288679],
+                        zoom: 2,
+                        maxZoom: 15,
+                        minZoom: 1,
+                        detectRetina: true // detect whether the sceen is high resolution or not.
+                    });
+
+                    // 2. Add a base map.
+                    L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
+
+                  //  add marker
+
+                    var marker = L.marker([45.84555, -119.288679]).addTo(mymap);
+                    marker.bindPopup("<b>Hermiston</b><br>Oregon").openPopup();
+
+                    // var popup = L.popup()
+                    //     .setLatLng([45.84555, -119.288679])
+                    //     .setContent("I am a standalone popup.")
+                    //     .openOn(mymap);
+                </script>
+
+
+                <!--&lt;!&ndash; Map Column &ndash;&gt;-->
+                <!--<div class="col-lg-8 mb-4">-->
+                    <!--&lt;!&ndash; Embedded Google Map &ndash;&gt;-->
+                    <!--&lt;!&ndash;<iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;11=39.099135, -100.27378&amp;spn=44.567095,-123.27378&amp;t=m&amp;z=12&amp;output=embed"></iframe>&ndash;&gt;-->
+                    <!--<iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=45.882193, -119.319961&amp;spn=45.882193, -119.319961&amp;t=m&amp;z=1&amp;output=embed"></iframe>-->
+                <!--</div>-->
 
 
 
